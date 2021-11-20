@@ -1,0 +1,99 @@
+﻿PlayingHud {
+    width: 67%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    .TurnLabel {
+        padding-top: 30px;
+        font-family: MPLUSRounded1c-Bold;
+        font-size: 20px;
+        color: lightgray;
+        text-shadow: 10px 5px 5px #000;
+    }
+
+    .TimerLabel {
+        font-family: MPLUSRounded1c-Bold;
+        font-size: 40px;
+        color: lightgray;
+        text-shadow: 10px 5px 5px #000;
+    }
+
+    .PromptLabel {
+        font-family: MPLUSRounded1c-Bold;
+        font-size: 22px;
+        color: lightgray;
+        padding: 10px;
+        text-shadow: 5px 2px 2px #000;
+    }
+
+    submissiontextentry {
+        padding: 10px;
+        font-size: 32px;
+        background-color: rgba(0, 0, 42, 0.8);
+        min-width: 200px;
+        height: 60px;
+        color: lightgray;
+        font-family: MPLUSRounded1c-Bold;
+        align-items: center;
+
+        &.hide {
+            opacity: 0;
+        }
+    }
+}
+
+.Entries {
+    width: 65%;
+    height: 65%;
+    margin-top: 150px;
+    margin-bottom: 25px;
+}
+
+PlayerEntry {
+    flex-direction: column;
+    align-items: center;
+
+    .UserPanel {
+        flex-direction: column;
+        align-items: center;
+
+        &.active {
+            padding-bottom: 10px;
+            border-bottom-width: 2px;
+            border-color: lightgray;
+            border-bottom-left-radius: 2px;
+            border-bottom-right-radius: 2px;
+        }
+
+        label {
+            font-family: MPlusRounded1c-Medium;
+            align-self: center;
+            padding: 10px;
+            padding-bottom: 5px;
+            padding-top: 5px;
+            font-size: 16px;
+            text-shadow: 3px 2px 2px #000;
+            color: lightgray;
+        }
+
+        image {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            border-width: 3px;
+        }
+    }
+
+    .TypedLabel {
+        font-size: 13px;
+        color: white;
+        background-color: rgba(0, 0, 42, 0.8);
+        padding: 2px;
+
+        &.hide {
+            opacity: 0;
+        }
+    }
+}

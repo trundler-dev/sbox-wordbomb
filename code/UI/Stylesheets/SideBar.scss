@@ -1,0 +1,99 @@
+﻿SideBar {
+    flex-direction: column;
+    width: 20%;
+    background-color: #1c1e1e;
+    border-left-width: 2px;
+
+    .Title {
+        width: 100%;
+        color: white;
+        font-size: 25px;
+        padding: 2px 0px 6px 8px;
+        background-color: #373a3a;
+    }
+}
+
+PlayerList {
+    height: 30%;
+    width: 100%;
+    pointer-events: all;
+    flex-direction: column;
+
+    .Scrollable {
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        overflow: scroll;
+    }
+}
+
+PlayerListEntry {
+    flex-shrink: 0;
+    flex-direction: row;
+    margin: 5px;
+
+    .PlayerListNameLabel {
+        width: 80%;
+        color: white;
+        background-color: transparent;
+        font-size: 18px;
+        padding: 2px 0px 6px 6px;
+    }
+
+    image {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+    }
+}
+
+ChatBox {
+    height: 70%;
+    width: 100%;
+    flex-direction: column;
+
+    .ChatWrapper {
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        overflow: scroll;
+    }
+
+    .ChatLabel {
+        width: 100%;
+        color: white;
+        font-size: 25px;
+        padding: 6px 0px 6px 6px;
+        background-color: #373a3a;
+    }
+
+    .ChatInput {
+        color: white;
+        padding: 10px;
+        background-color: #444848;
+        font-size: 14px;
+        pointer-events: none;
+    }
+}
+
+ChatEntry {
+    flex-shrink: 0;
+    flex-direction: row;
+    margin: 5px;
+    align-items: baseline;
+
+    .ChatNameLabel {
+        color: white;
+        font-size: 14px;
+        font-weight: bold;
+        padding: 1px 6px 0 3px;
+        flex-shrink: 0;
+    }
+
+    .ChatMessageLabel {
+        font-family: MPlusRounded1c-Medium;
+        color: white;
+        font-size: 12px;
+        padding-top: 2px;
+    }
+}

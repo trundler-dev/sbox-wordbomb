@@ -1,0 +1,18 @@
+﻿WaitingHud {
+    flex-direction: column;
+    font-family: MPLUSRounded1c;
+    font-weight: bold;
+
+    .welcome {
+        font-size: 45%;
+        color: lightgray;
+        text-align: center;
+    }
+
+    .waiting {
+        font-size: 30%;
+        color: lightgray;
+        padding-top: 25px;
+        text-align: center;
+    }
+}

@@ -1,0 +1,12 @@
+﻿EndHud {
+    flex-direction: column;
+    font-family: MPLUSRounded1c;
+    font-weight: bold;
+
+    .winner {
+        font-size: 45%;
+        color: lightgray;
+        text-align: center;
+        text-shadow: 10px 5px 5px #000;
+    }
+}

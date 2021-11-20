@@ -1,0 +1,9 @@
+Properties
+codegen-*
+.csproj
+.intermediate
+.vs
+obj/
+WordBomb.csproj
+*bakeresourcecache*
+tools_*_*.bin
