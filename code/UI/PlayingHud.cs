@@ -113,15 +113,6 @@ namespace WordBomb.UI
 				i++;
 			}
 		}
-
-		[ServerCmd]
-		public static void RotateTurn()
-		{
-			var game = Game.Instance;
-			if ( game == null ) return;
-
-			game.AssignNextPlayer();
-		}
 	}
 
 	public partial class PlayerEntry : Panel

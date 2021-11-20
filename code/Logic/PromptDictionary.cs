@@ -48,7 +48,24 @@ namespace WordBomb.Logic
 		{
 			"ARE",
 			"BRE",
-			"DIS"
+			"DIS",
+			"ECK",
+			"FAR",
+			"GLE",
+			"HIS",
+			"IDE",
+			"LTS",
+			"MAR",
+			"NER",
+			"OPE",
+			"PLE",
+			"RAN",
+			"RES",
+			"SIN",
+			"STR",
+			"TRE",
+			"WAR",
+			"YOU"
 		};
 
 		public static string GetRandomTwoLetterPrompt()
