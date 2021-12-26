@@ -10,8 +10,6 @@ namespace WordBomb.UI
 			if ( IsClient )
 			{
 				RootPanel.StyleSheet.Load( "/UI/Stylesheets/Hud.scss" );
-				RootPanel.AddChild<GameArea>();
-				RootPanel.AddChild<SideBar>();
 			}
 		}
 	}

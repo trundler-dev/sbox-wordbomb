@@ -16,35 +16,6 @@ namespace WordBomb.Logic
 		{
 			UsedWordSubmissions = new();
 		}
-
-		public bool PromptInWord( WordSubmission submission, Player player )
-		{
-			return submission.Submission.Contains( player.Prompt, StringComparison.OrdinalIgnoreCase );
-		}
-
-		public bool WordIsUsed( WordSubmission submission )
-		{
-			return UsedWordSubmissions.Contains( submission.Submission );
-		}
-
-		public bool WordIsValid( WordSubmission submission )
-		{
-			string response = DictionaryApi.GetWord( submission.Submission ).Result;
-
-			if ( response.Equals( "404" ) ) return false;
-
-			return response != null;
-		}
-
-		public void AddSubmission( WordSubmission submission )
-		{
-			UsedWordSubmissions.Add( submission.Submission );
-		}
-
-		public void ClearUsedWordSubmissions()
-		{
-			UsedWordSubmissions.Clear();
-		}
 	}
 
 	/// <summary>
@@ -57,7 +28,7 @@ namespace WordBomb.Logic
 			try
 			{
 				Sandbox.Internal.Http http = new(
-					new System.Uri( Consts.DICTIONARY_URI + word ) );
+					new Uri( Consts.DICTIONARY_URI + word ) );
 				string message = await http.GetStringAsync();
 
 				Log.Info( "DictionaryApi: " + message );

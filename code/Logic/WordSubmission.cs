@@ -13,30 +13,5 @@ namespace WordBomb.Logic
 		{
 			Submission = submission;
 		}
-
-		public bool IsValidWord()
-		{
-			var player = Game.Instance.ActivePlayer;
-			var wordDictionary = Game.Instance.Dict;
-
-			bool isValid = !wordDictionary.WordIsUsed( this ) && wordDictionary.WordIsValid( this ) && wordDictionary.PromptInWord( this, player );
-			if ( isValid )
-			{
-				wordDictionary.AddSubmission( this );
-				return true;
-			}
-			return false;
-		}
-
-		public bool SubmitWord()
-		{
-			if ( IsValidWord() )
-			{
-				Game.Instance.ActivePlayer.SubmittedWord = true;
-				Game.Instance.ActivePlayer.LastSubmittedWord = Submission;
-				return true;
-			}
-			return false;
-		}
 	}
 }
