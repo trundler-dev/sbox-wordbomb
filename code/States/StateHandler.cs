@@ -5,7 +5,7 @@ namespace WordBomb.States
 {
 	public partial class StateHandler : BaseNetworkable
 	{
-		[Net] public State State { get; set; }
+		[Net] public State State { get; set; } = new WaitingState();
 		public List<Player> Players { get; set; } = new();
 		public static StateHandler Instance { get; set; }
 
@@ -13,13 +13,14 @@ namespace WordBomb.States
 		{
 			Instance = this;
 
-			/*if ( Host.IsServer )
-				State.Start();*/
+			if ( Host.IsServer )
+				State.Start();
 		}
 
 		public void OnPlayerJoin( Player player )
 		{
-			Players.Add( player );
+			if ( !Players.Contains( player ) )
+				Players.Add( player );
 			State?.OnPlayerJoin( player );
 		}
 
